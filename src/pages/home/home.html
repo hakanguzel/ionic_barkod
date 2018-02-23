@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Barkod Test
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding> 
+  <h1>
+    <button ion-button color="dark" full round (click)="scan()">Tara</button>
+  </h1>
+
+  <ion-card *ngIf="productFound">
+    <ion-card-header>
+      <h2>{{selectedProduct.MUSTERI_ADI}} {{selectedProduct.MUSTERI_SOYADI}}</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Ser. Tag {{selectedProduct.SERVIS_TAG}}</li>
+        <li>KABUL_ZAMANI {{selectedProduct.FIS_NO}}</li>
+        <li>TESLIM_ALAN {{selectedProduct.TESLIM_ALAN}}</li>
+		<li>BARKOD {{selectedProduct.BARKOD}}</li>
+        <li>NOTLAR {{selectedProduct.NOTLAR}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

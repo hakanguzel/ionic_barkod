@@ -1,0 +1,15 @@
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://scriptbulutu.com/webservis/hrc_tamir.php/?format=json",
+  "method": "GET",
+  "headers": {
+    "Cache-Control": "no-cache",
+    "Postman-Token": "79307a07-6288-9d90-18a0-3819271c3254"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  document.write(response);
+});
